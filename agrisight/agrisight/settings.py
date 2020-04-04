@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']  # TODO: make this safe https://docs.djangoproject.com/en/
 # Application definition
 
 INSTALLED_APPS = [
+    'geosight.apps.GeosightConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
