@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    path('', include('frontend.urls')),
     path('geosight/', include('geosight.urls')),
     path('admin/', admin.site.urls),
 ]
