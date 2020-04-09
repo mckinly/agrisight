@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./agrisight/frontend/src/index.js --output ./agrisight/frontend/static/frontend/main.js",
+    "dev": "webpack --mode development --watch ./agrisight/frontend/src/index.js --output ./agrisight/frontend/static/frontend/main.js",
     "build": "webpack --mode production ./agrisight/frontend/src/index.js --output ./agrisight/frontend/static/frontend/main.js"
   },
   "repository": {
