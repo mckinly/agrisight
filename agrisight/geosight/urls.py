@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('/geosight/', views.geosight, name='geosight')
 ]
