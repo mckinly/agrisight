@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getAddress } from "../../actions/address";
+import { getAddress, deleteAddress } from "../../actions/address";
 
 export class Geosight extends Component {
   static propTypes = {
@@ -21,23 +21,28 @@ export class Geosight extends Component {
             <tr>
               <th>ID</th>
               <th>Name</th>
+              <th>Address</th>
               <th>Email</th>
-              <th>Message</th>
               <th />
             </tr>
           </thead>
           <tbody>
-            {this.props.address.map(lead => {
-              <tr key={lead.id}>
-                <td>{lead.id}</td>
-                <td>{lead.name}</td>
-                <td>{lead.email}</td>
-                <td>{lead.message}</td>
+            {this.props.address.map(address => (
+              <tr key={address.id}>
+                <td>{address.id}</td>
+                <td>{address.name}</td>
+                <td>{address.address}</td>
+                <td>{address.email}</td>
                 <td>
-                  <button className="btn btn-danger btn-sm">Delete</button>
+                  <button
+                    onClick={this.props.deleteAddress.bind(this, address.id)}
+                    className="btn btn-danger btn-sm"
+                  >
+                    Delete
+                  </button>
                 </td>
-              </tr>;
-            })}
+              </tr>
+            ))}
           </tbody>
         </table>
       </Fragment>
@@ -51,5 +56,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getAddress }
+  { getAddress, deleteAddress }
 )(Geosight);
