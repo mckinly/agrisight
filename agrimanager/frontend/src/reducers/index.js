@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import geosight from "./geosight";
+import agrisight from "./agrisight";
 
 export default combineReducers({
-  geosightReducer: geosight
+  agrisightReducer: agrisight
 });

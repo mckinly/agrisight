@@ -22,7 +22,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     "frontend",
-    "geosight.apps.GeosightConfig",
+    "agrisight.apps.AgrisightConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

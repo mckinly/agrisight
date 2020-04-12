@@ -3,7 +3,7 @@ import { GET_ADDRESS, DELETE_ADDRESS, ADD_ADDRESS } from "./types";
 
 export const getAddress = () => dispatch => {
   axios
-    .get("/api/geosight/")
+    .get("/api/agrisight/")
     .then(res => {
       dispatch({
         type: GET_ADDRESS,
@@ -15,7 +15,7 @@ export const getAddress = () => dispatch => {
 
 export const deleteAddress = id => dispatch => {
   axios
-    .delete(`/api/geosight/${id}/`)
+    .delete(`/api/agrisight/${id}/`)
     .then(res => {
       dispatch({
         type: DELETE_ADDRESS,
@@ -27,7 +27,7 @@ export const deleteAddress = id => dispatch => {
 
 export const addAddress = address => dispatch => {
   axios
-    .post(`/api/geosight/`, address)
+    .post(`/api/agrisight/`, address)
     .then(res => {
       dispatch({
         type: ADD_ADDRESS,

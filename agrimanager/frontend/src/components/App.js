@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 
 import Header from "./layout/Header";
-import Dashboard from "./geosight/Dashboard";
+import Dashboard from "./agrisight/Dashboard";
 
 import { Provider } from "react-redux";
 import store from "../store";

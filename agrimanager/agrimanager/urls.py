@@ -3,6 +3,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path("", include("frontend.urls")),
-    path("", include("geosight.urls")),
+    path("", include("agrisight.urls")),
     path("admin/", admin.site.urls),
 ]

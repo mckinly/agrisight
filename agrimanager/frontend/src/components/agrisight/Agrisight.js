@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getAddress, deleteAddress } from "../../actions/address";
 
-export class Geosight extends Component {
+export class Agrisight extends Component {
   static propTypes = {
     address: PropTypes.array.isRequired,
     getAddress: PropTypes.func.isRequired,
@@ -17,7 +17,7 @@ export class Geosight extends Component {
   render() {
     return (
       <Fragment>
-        <h2>Geosight main view</h2>
+        <h2>Agrisight main view</h2>
         <table className="table table-stripped">
           <thead>
             <tr>
@@ -53,10 +53,10 @@ export class Geosight extends Component {
 }
 
 const mapStateToProps = state => ({
-  address: state.geosightReducer.address
+  address: state.agrisightReducer.address
 });
 
 export default connect(
   mapStateToProps,
   { getAddress, deleteAddress }
-)(Geosight);
+)(Agrisight);

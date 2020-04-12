@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from geosight.models import User
+from agrisight.models import User
 
 
-class GeosightSerializer(serializers.ModelSerializer):
+class AgrisightSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = "__all__"
