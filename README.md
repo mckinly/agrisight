@@ -7,7 +7,7 @@ An in-progress, proof-of-concept web app for tracking farm property values built
 1. Clone this repository
 2. Run `docker-compose up` from the root directory
 
-## TODO: 
+## TODO 
 - [x] Create Django app
 - [x] Create React app
 - [x] Render data retrieved from the backend
