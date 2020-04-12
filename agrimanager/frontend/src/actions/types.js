@@ -1,3 +1,3 @@
-export const GET_ADDRESS = "GET_ADDRESS";
-export const DELETE_ADDRESS = "DELETE_ADDRESS";
-export const ADD_ADDRESS = "ADD_ADDRESS";
+export const GET_ACREAGE = "GET_ACREAGE";
+export const DELETE_ACREAGE = "DELETE_ACREAGE";
+export const ADD_ACREAGE = "ADD_ACREAGE";

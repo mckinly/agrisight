@@ -1,25 +1,25 @@
-import { GET_ADDRESS, DELETE_ADDRESS, ADD_ADDRESS } from "../actions/types.js";
+import { GET_ACREAGE, DELETE_ACREAGE, ADD_ACREAGE } from "../actions/types.js";
 
 const initialState = {
-  address: []
+  acreage: []
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case GET_ADDRESS:
+    case GET_ACREAGE:
       return {
         ...state,
-        address: action.payload
+        acreage: action.payload
       };
-    case DELETE_ADDRESS:
+    case DELETE_ACREAGE:
       return {
         ...state,
-        address: state.address.filter(address => address.id !== action.payload)
+        acreage: state.acreage.filter(acreage => acreage.id !== action.payload)
       };
-    case ADD_ADDRESS:
+    case ADD_ACREAGE:
       return {
         ...state,
-        address: [...state.address, action.payload]
+        acreage: [...state.acreage, action.payload]
       };
     default:
       return state;

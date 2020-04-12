@@ -1,36 +1,36 @@
 import axios from "axios";
-import { GET_ADDRESS, DELETE_ADDRESS, ADD_ADDRESS } from "./types";
+import { GET_ACREAGE, DELETE_ACREAGE, ADD_ACREAGE } from "./types";
 
-export const getAddress = () => dispatch => {
+export const getAcreage = () => dispatch => {
   axios
     .get("/api/agrisight/")
     .then(res => {
       dispatch({
-        type: GET_ADDRESS,
+        type: GET_ACREAGE,
         payload: res.data
       });
     })
     .catch(err => console.log(err));
 };
 
-export const deleteAddress = id => dispatch => {
+export const deleteAcreage = id => dispatch => {
   axios
     .delete(`/api/agrisight/${id}/`)
     .then(res => {
       dispatch({
-        type: DELETE_ADDRESS,
+        type: DELETE_ACREAGE,
         payload: id
       });
     })
     .catch(err => console.log(err));
 };
 
-export const addAddress = address => dispatch => {
+export const addAcreage = acreage => dispatch => {
   axios
-    .post(`/api/agrisight/`, address)
+    .post(`/api/agrisight/`, acreage)
     .then(res => {
       dispatch({
-        type: ADD_ADDRESS,
+        type: ADD_ACREAGE,
         payload: res.data
       });
     })

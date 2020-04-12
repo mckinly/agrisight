@@ -1,17 +1,17 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getAddress, deleteAddress } from "../../actions/address";
+import { getAcreage, deleteAcreage } from "../../actions/acreage";
 
 export class Agrisight extends Component {
   static propTypes = {
-    address: PropTypes.array.isRequired,
-    getAddress: PropTypes.func.isRequired,
-    deleteAddress: PropTypes.func.isRequired
+    acreage: PropTypes.array.isRequired,
+    getAcreage: PropTypes.func.isRequired,
+    deleteAcreage: PropTypes.func.isRequired
   };
 
   componentDidMount() {
-    this.props.getAddress();
+    this.props.getAcreage();
   }
 
   render() {
@@ -29,15 +29,15 @@ export class Agrisight extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.address.map(address => (
-              <tr key={address.id}>
-                <td>{address.id}</td>
-                <td>{address.name}</td>
-                <td>{address.address}</td>
-                <td>{address.email}</td>
+            {this.props.acreage.map(acreage => (
+              <tr key={acreage.id}>
+                <td>{acreage.id}</td>
+                <td>{acreage.name}</td>
+                <td>{acreage.address}</td>
+                <td>{acreage.email}</td>
                 <td>
                   <button
-                    onClick={this.props.deleteAddress.bind(this, address.id)}
+                    onClick={this.props.deleteAcreage.bind(this, acreage.id)}
                     className="btn btn-danger btn-sm"
                   >
                     Delete
@@ -53,10 +53,10 @@ export class Agrisight extends Component {
 }
 
 const mapStateToProps = state => ({
-  address: state.agrisightReducer.address
+  acreage: state.agrisightReducer.acreage
 });
 
 export default connect(
   mapStateToProps,
-  { getAddress, deleteAddress }
+  { getAcreage, deleteAcreage }
 )(Agrisight);
