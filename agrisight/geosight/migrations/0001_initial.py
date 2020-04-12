@@ -8,24 +8,45 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Location',
+            name="Location",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('longitude', models.CharField(max_length=200)),
-                ('latitude', models.CharField(max_length=200)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("longitude", models.CharField(max_length=200)),
+                ("latitude", models.CharField(max_length=200)),
             ],
         ),
         migrations.CreateModel(
-            name='Choice',
+            name="Choice",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('choice_text', models.CharField(max_length=200)),
-                ('location', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='geosight.Location')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("choice_text", models.CharField(max_length=200)),
+                (
+                    "location",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="geosight.Location",
+                    ),
+                ),
             ],
         ),
     ]
