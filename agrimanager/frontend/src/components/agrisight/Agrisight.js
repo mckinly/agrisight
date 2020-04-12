@@ -1,13 +1,15 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getAcreage, deleteAcreage } from "../../actions/acreage";
+import { getAcreage, deleteAcreage, viewAcreage } from "../../actions/acreage";
+import { Acreage } from "./Acreage";
 
 export class Agrisight extends Component {
   static propTypes = {
     acreage: PropTypes.array.isRequired,
     getAcreage: PropTypes.func.isRequired,
-    deleteAcreage: PropTypes.func.isRequired
+    deleteAcreage: PropTypes.func.isRequired,
+    viewAcreage: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -17,7 +19,7 @@ export class Agrisight extends Component {
   render() {
     return (
       <Fragment>
-        <h2>Agrisight main view</h2>
+        <h2>Acreages</h2>
         <table className="table table-stripped">
           <thead>
             <tr>
@@ -37,6 +39,12 @@ export class Agrisight extends Component {
                 <td>{acreage.email}</td>
                 <td>
                   <button
+                    onClick={this.props.viewAcreage.bind(this, acreage.id)}
+                    className="btn btn-primary btn-sm"
+                  >
+                    View
+                  </button>
+                  <button
                     onClick={this.props.deleteAcreage.bind(this, acreage.id)}
                     className="btn btn-danger btn-sm"
                   >
@@ -47,6 +55,7 @@ export class Agrisight extends Component {
             ))}
           </tbody>
         </table>
+        <Acreage />
       </Fragment>
     );
   }
@@ -58,5 +67,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getAcreage, deleteAcreage }
+  { getAcreage, deleteAcreage, viewAcreage }
 )(Agrisight);
