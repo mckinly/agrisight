@@ -5,7 +5,9 @@ import { getAddress, deleteAddress } from "../../actions/address";
 
 export class Geosight extends Component {
   static propTypes = {
-    address: PropTypes.array.isRequired
+    address: PropTypes.array.isRequired,
+    getAddress: PropTypes.func.isRequired,
+    deleteAddress: PropTypes.func.isRequired
   };
 
   componentDidMount() {

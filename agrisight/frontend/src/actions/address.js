@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_ADDRESS, DELETE_ADDRESS } from "./types";
+import { GET_ADDRESS, DELETE_ADDRESS, ADD_ADDRESS } from "./types";
 
 export const getAddress = () => dispatch => {
   axios
@@ -20,6 +20,18 @@ export const deleteAddress = id => dispatch => {
       dispatch({
         type: DELETE_ADDRESS,
         payload: id
+      });
+    })
+    .catch(err => console.log(err));
+};
+
+export const addAddress = address => dispatch => {
+  axios
+    .post(`/api/geosight/`, address)
+    .then(res => {
+      dispatch({
+        type: ADD_ADDRESS,
+        payload: res.data
       });
     })
     .catch(err => console.log(err));
