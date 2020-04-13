@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { viewAcreage } from "../../actions/acreage";
+import Map from "./Map";
 
 export class Acreage extends Component {
   state = {
@@ -19,10 +20,8 @@ export class Acreage extends Component {
     return (
       <div className="card card-body mt-4 mb-4">
         <h2>Acreage Overview</h2>
-        <div className="form-group">
-          <iframe></iframe>
-          <button className="btn btn-primary">Close Acreage</button>
-        </div>
+        <Map />
+        <button className="btn btn-primary">Close Acreage</button>
       </div>
     );
   }
