@@ -43,6 +43,7 @@ export const addAcreage = acreage => dispatch => {
 };
 
 export const viewAcreage = id => dispatch => {
+  // TODO: probably want to do some sort of Map component
   axios
     .get(`/api/agrisight/${id}/`)
     .then(res => {

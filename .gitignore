@@ -2,6 +2,8 @@ node_modules
 .idea/
 venv/
 .vscode/
+.env*
+agrimanager/frontend/static/frontend/main.js
 
 ### Django ###
 *.log

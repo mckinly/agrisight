@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --watch ./agrimanager/frontend/src/index.js --output ./agrimanager/frontend/static/frontend/main.js",
-    "build": "webpack --mode production ./agrimanager/frontend/src/index.js --output ./agrimanager/frontend/static/frontend/main.js"
+    "dev": "webpack --env.ENVIRONMENT=local --mode development --watch ./agrimanager/frontend/src/index.js --output ./agrimanager/frontend/static/frontend/main.js",
+    "build": "webpack --env.ENVIRONMENT=production --mode production ./agrimanager/frontend/src/index.js --output ./agrimanager/frontend/static/frontend/main.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,8 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "google-maps-react": "^2.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
