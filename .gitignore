@@ -4,7 +4,7 @@ venv/
 .vscode/
 .env*
 agrimanager/frontend/static/frontend/main.js
-agrimanager/frontend/src/__snapshots__
+agrimanager/frontend/src/__test__/__snapshots__
 
 ### Django ###
 *.log
