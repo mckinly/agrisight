@@ -6,19 +6,21 @@ const mapStyles = {
   height: "100%",
   padding: "60%"
 };
-console.log(process.env.REACT_APP_GOOGLE_API_KEY);
 
 export class MapContainer extends Component {
+  state = {
+    center: { lat: 31.92782, lng: -105.212091 }
+  };
+
+  onChange = e => this.setState({ [e.target.name]: e.target.value });
+
   render() {
     return (
       <Map
         google={this.props.google}
         zoom={14}
         style={mapStyles}
-        initialCenter={{
-          lat: -1.2884,
-          lng: 36.8233
-        }}
+        initialCenter={this.state.center}
       />
     );
   }

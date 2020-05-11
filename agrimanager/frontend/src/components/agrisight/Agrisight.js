@@ -7,9 +7,10 @@ import { Acreage } from "./Acreage";
 export class Agrisight extends Component {
   static propTypes = {
     acreage: PropTypes.array.isRequired,
+    selected_acreage: PropTypes.array.isRequired,
     getAcreage: PropTypes.func.isRequired,
     deleteAcreage: PropTypes.func.isRequired,
-    viewAcreage: PropTypes.func.isRequired
+    viewAcreage: PropTypes.func
   };
 
   componentDidMount() {
@@ -58,6 +59,7 @@ export class Agrisight extends Component {
           </table>
         </div>
         <div>
+          <h3>{this.props.selected_acreage}</h3>
           <Acreage />
         </div>
       </Fragment>
@@ -66,7 +68,8 @@ export class Agrisight extends Component {
 }
 
 const mapStateToProps = state => ({
-  acreage: state.agrisightReducer.acreage
+  acreage: state.agrisightReducer.acreage,
+  selected_acreage: state.agrisightReducer.selected_acreage
 });
 
 export default connect(

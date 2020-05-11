@@ -1,7 +1,13 @@
-import { GET_ACREAGE, DELETE_ACREAGE, ADD_ACREAGE } from "../actions/types.js";
+import {
+  GET_ACREAGE,
+  DELETE_ACREAGE,
+  ADD_ACREAGE,
+  VIEW_ACREAGE
+} from "../actions/types.js";
 
 const initialState = {
-  acreage: []
+  acreage: [],
+  selected_acreage: []
 };
 
 export default function(state = initialState, action) {
@@ -20,6 +26,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         acreage: [...state.acreage, action.payload]
+      };
+    case VIEW_ACREAGE:
+      return {
+        ...state,
+        selected_acreage: [action.payload]
       };
     default:
       return state;
