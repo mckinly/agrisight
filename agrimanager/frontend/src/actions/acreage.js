@@ -1,9 +1,11 @@
 import axios from "axios";
+import { createMessage } from "./messages";
 import {
   GET_ACREAGE,
   DELETE_ACREAGE,
   ADD_ACREAGE,
-  VIEW_ACREAGE
+  VIEW_ACREAGE,
+  GET_ERRORS
 } from "./types";
 
 export const getAcreage = () => dispatch => {
@@ -22,6 +24,7 @@ export const deleteAcreage = id => dispatch => {
   axios
     .delete(`/api/agrisight/${id}/`)
     .then(res => {
+      dispatch(createMessage({ deleteAcreage: "Acreage Deleted" }));
       dispatch({
         type: DELETE_ACREAGE,
         payload: id
@@ -34,12 +37,22 @@ export const addAcreage = acreage => dispatch => {
   axios
     .post(`/api/agrisight/`, acreage)
     .then(res => {
+      dispatch(createMessage({ addAcreage: "Acreage Added" }));
       dispatch({
         type: ADD_ACREAGE,
         payload: res.data
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      const errors = {
+        msg: err.response.data,
+        status: err.response.status
+      };
+      dispatch({
+        type: GET_ERRORS,
+        payload: errors
+      });
+    });
 };
 
 export const viewAcreage = id => dispatch => {
