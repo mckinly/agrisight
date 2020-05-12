@@ -1,4 +1,5 @@
 import axios from "axios";
+import { createMessage } from "./messages";
 import {
   GET_ACREAGE,
   DELETE_ACREAGE,
@@ -23,6 +24,7 @@ export const deleteAcreage = id => dispatch => {
   axios
     .delete(`/api/agrisight/${id}/`)
     .then(res => {
+      dispatch(createMessage({ deleteAcreage: "Acreage Deleted" }));
       dispatch({
         type: DELETE_ACREAGE,
         payload: id
@@ -35,6 +37,7 @@ export const addAcreage = acreage => dispatch => {
   axios
     .post(`/api/agrisight/`, acreage)
     .then(res => {
+      dispatch(createMessage({ addAcreage: "Acreage Added" }));
       dispatch({
         type: ADD_ACREAGE,
         payload: res.data
