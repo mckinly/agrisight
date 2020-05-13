@@ -21,6 +21,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    "knox",
     "frontend",
     "agrisight.apps.AgrisightConfig",
     "django.contrib.admin",
@@ -30,6 +31,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
+
+REST_FRAMEWORK = {"DEFAULT_AUTHENTICATION_CLASSES": ("knox.auth.TokenAuthentication")}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
