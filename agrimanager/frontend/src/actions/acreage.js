@@ -1,11 +1,10 @@
 import axios from "axios";
-import { createMessage } from "./messages";
+import { createMessage, returnErrors } from "./messages";
 import {
   GET_ACREAGE,
   DELETE_ACREAGE,
   ADD_ACREAGE,
-  VIEW_ACREAGE,
-  GET_ERRORS
+  VIEW_ACREAGE
 } from "./types";
 
 export const getAcreage = () => dispatch => {
@@ -17,7 +16,9 @@ export const getAcreage = () => dispatch => {
         payload: res.data
       });
     })
-    .catch(err => console.log(err));
+    .catch(err =>
+      disptach(returnErrors(err.response.data, error.response.status))
+    );
 };
 
 export const deleteAcreage = id => dispatch => {
@@ -43,16 +44,9 @@ export const addAcreage = acreage => dispatch => {
         payload: res.data
       });
     })
-    .catch(err => {
-      const errors = {
-        msg: err.response.data,
-        status: err.response.status
-      };
-      dispatch({
-        type: GET_ERRORS,
-        payload: errors
-      });
-    });
+    .catch(err =>
+      dispatch(returnErrors(err.response.data, err.response.status))
+    );
 };
 
 export const viewAcreage = id => dispatch => {
