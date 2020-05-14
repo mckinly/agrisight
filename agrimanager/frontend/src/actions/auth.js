@@ -7,6 +7,9 @@ import {
   AUTH_ERROR,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
+  LOGOUT_SUCCESS,
+  REGISTER_FAIL,
+  REGISTER_SUCCESS,
 } from "./types";
 
 export const loadUser = () => (dispatch, getState) => {
@@ -40,6 +43,31 @@ export const loadUser = () => (dispatch, getState) => {
     });
 };
 
+export const register = ({ username, password, email }) => (dispatch) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  const body = JSON.stringify({ username, email, password });
+
+  axios
+    .post("/api/auth/register", body, config)
+    .then((res) => {
+      dispatch({
+        type: REGISTER_SUCCESS,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      dispatch(returnErrors(err.response.data, err.response.status));
+      dispatch({
+        type: REGISTER_FAIL,
+      });
+    });
+};
+
 export const login = (username, password) => (dispatch) => {
   const config = {
     headers: {
@@ -62,5 +90,31 @@ export const login = (username, password) => (dispatch) => {
       dispatch({
         type: LOGIN_FAIL,
       });
+    });
+};
+
+export const logout = () => (dispatch, getState) => {
+  const token = getState().auth.token;
+
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  if (token) {
+    config.headers["Authorization"] = `Token ${token}`;
+  }
+
+  axios
+    .get("/api/auth/logout", null, config)
+    .then((res) => {
+      dispatch({
+        type: LOGOUT_SUCCESS,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      dispatch(returnErrors(err.response.data, err.response.status));
     });
 };
