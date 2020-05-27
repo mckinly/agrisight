@@ -13,7 +13,6 @@ An in-progress, proof-of-concept web app for tracking farm property values built
 - [x] Render data retrieved from the backend
 - [x] Update, maintain redux state
 - [x] Build image using Google Cloud and Github Actions
-- [ ] User can view satellite image of property
-- [ ] User can log in and store properties
-- [ ] Implement automated backend and frontend testing as part of GCloud build process
-- [ ] Host publicly
+- [x] Test react component testing with jest
+- [ ] Test django with pytest
+- [ ] Implement automated test execution

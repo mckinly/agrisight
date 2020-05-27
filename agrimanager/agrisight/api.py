@@ -4,6 +4,11 @@ from .serializers import AgrisightSerializer
 
 
 class AgrisightViewSet(viewsets.ModelViewSet):
-    queryset = Acreage.objects.all()
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [permissions.IsAuthenticated]
     serializer_class = AgrisightSerializer
+
+    def get_queryset(self):
+        return self.request.user.acreage.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
