@@ -1,6 +1,9 @@
-from django.test import TestCase
+import pytest
 
-# Create your tests here.
-def test_hello():
-    print("hello")
+from django.contrib.auth.models import User
 
+
+@pytest.mark.django_db
+def test_user_create():
+    User.objects.create_user("john", "lennon@thebeatles.com", "johnpassword")
+    assert User.objects.count() == 1
