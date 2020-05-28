@@ -1,12 +1,13 @@
 # agrisight
 
 ## Description
-A web app for creating, viewing, updating, and deleting real estate properties with an integrated Google Maps Satellite view.
+A tested django, react/redux web app with multi-user authentication for creating, viewing, updating, and deleting agriculture properties with an integrated Google Maps Satellite view.
 ![Home Overview](/img/home.png)
 
 ## Built and Tested using
 
 <img src=https://static.djangoproject.com/img/logos/django-logo-negative.png width="200" height="100" />
+<img src=https://portworx.com/wp-content/uploads/2018/05/postgresql-logo.png width="100" height="100">
 <img src=https://sujanbyanjankar.com.np/wp-content/uploads/2019/02/react-redux.png width="100" height="100">
 <img src=https://docs.pytest.org/en/latest/_static/pytest1.png width="100" height="100">
 <img src=https://xebialabs.com/wp-content/uploads/jest.jpg width="100" height="100">
