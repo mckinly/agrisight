@@ -9,7 +9,7 @@ services:
       - POSTGRES_PASSWORD=password
   web:
     build: .
-    command: bash -c "python -m pytest agrimanager/ && python agrimanager/manage.py runserver 0.0.0.0:8000"
+    command: bash -c "ls && python -m pytest /code/agrimanager/ && python agrimanager/manage.py runserver 0.0.0.0:8000 | python agrimanager/manage.py migrate"
     volumes:
       - .:/code
     ports:
