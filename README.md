@@ -1,18 +1,17 @@
 # agrisight
 
 ## Description
-An in-progress, proof-of-concept web app for tracking farm property values built using Django, React, redux, PostgresQL and Google Cloud Platform.
+A web app for creating, viewing, updating, and deleting real estate properties.
 
-## Run
+## Built and Tested using
+
+<img src=https://static.djangoproject.com/img/logos/django-logo-negative.png width="200" height="100" />
+<img src=https://cdn-images-1.medium.com/fit/t/1600/480/1*CiYzhVhFjqI6QH72xETY1A.jpeg width="250" height="100">
+<img src=https://docs.pytest.org/en/latest/_static/pytest1.png width="100" height="100">
+<img src=https://xebialabs.com/wp-content/uploads/jest.jpg width="100" height="100">
+
+## Development
+#### Run
 1. Clone this repository
 2. Run `docker-compose up` from the root directory
-
-## TODO 
-- [x] Create Django app
-- [x] Create React app
-- [x] Render data retrieved from the backend
-- [x] Update, maintain redux state
-- [x] Build image using Google Cloud and Github Actions
-- [x] Test react component testing with jest
-- [x] Test django with pytest
-- [x] Implement automated test execution
+3. Frontend is accessible on `localhost:8000`
