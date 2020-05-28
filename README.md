@@ -14,5 +14,5 @@ An in-progress, proof-of-concept web app for tracking farm property values built
 - [x] Update, maintain redux state
 - [x] Build image using Google Cloud and Github Actions
 - [x] Test react component testing with jest
-- [ ] Test django with pytest
-- [ ] Implement automated test execution
+- [x] Test django with pytest
+- [x] Implement automated test execution
