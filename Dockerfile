@@ -1,7 +1,8 @@
-FROM python:3
-ENV PYTHONUNBUFFERED 1
+FROM nikolaik/python-nodejs:latest
 RUN mkdir /code
 WORKDIR /code
 COPY requirements.txt /code/
-RUN pip install -r requirements.txt
+RUN python3 -m pip install -r requirements.txt
 COPY . /code/
+RUN npm install
+RUN npm run dev&

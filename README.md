@@ -16,6 +16,5 @@ A tested django, react/redux web app with multi-user authentication for creating
 #### Run
 1. Clone this repository
 1. Create a `.env` file in the root of the project directory containing `REACT_APP_GOOGLE_API_KEY=<your API key>`
-1. `npm run dev` to create the minified javascript
 1. Run `docker-compose up` from the root directory
 1. Frontend is accessible on `localhost:8000`
