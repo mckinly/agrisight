@@ -40,6 +40,7 @@ export class Form extends Component {
               className="form-control"
               type="text"
               name="name"
+              test-id="add-acreage-name"
               onChange={this.onChange}
               value={name}
             />

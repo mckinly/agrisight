@@ -11,7 +11,7 @@ A tested django, react/redux web app with multi-user authentication for creating
 <img src=https://portworx.com/wp-content/uploads/2018/05/postgresql-logo.png width="100" height="100">
 <img src=https://sujanbyanjankar.com.np/wp-content/uploads/2019/02/react-redux.png width="100" height="100">
 <img src=https://docs.pytest.org/en/latest/_static/pytest1.png width="100" height="100">
-<img src="https://www.cypress.io/static/cypress-io-logo-social-share-8fb8a1db3cdc0b289fad927694ecb415.png" width="200" height="100">
+<img src="https://www.fleekitsolutions.com/wp-content/uploads/2020/04/webdriverio.png" width="200" height="100">
 </table>
 
 ## Development
