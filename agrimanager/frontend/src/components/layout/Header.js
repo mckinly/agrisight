@@ -22,6 +22,7 @@ export class Header extends Component {
           <button
             onClick={this.props.logout}
             className="nav-link btn btn-info btn-sm text-light"
+            test-id="logout"
           >
             Logout
           </button>

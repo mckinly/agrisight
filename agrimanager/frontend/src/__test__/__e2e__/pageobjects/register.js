@@ -1,14 +1,16 @@
 import Page from './page'
 
-class LoginPage extends Page {
+class RegisterPage extends Page {
 
     get username() { return $("[test-id='username']") }
+    get email() { return $("[test-id='email']") }
     get password() { return $("[test-id='password']") }
+    get password2() { return $("[test-id='password2']") }
     get submitBtn() { return $("[test-id='submit']") }
     get flash() { return $('#__react-alert__') }
 
     open() {
-        super.open('localhost:8000/#/login')
+        super.open('localhost:8000/#/register')
     }
 
     submit() {
@@ -17,4 +19,4 @@ class LoginPage extends Page {
 
 }
 
-export default new LoginPage()
+export default new RegisterPage()

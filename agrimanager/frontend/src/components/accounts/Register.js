@@ -51,6 +51,7 @@ export class Register extends Component {
                 type="text"
                 className="form-control"
                 name="username"
+                test-id="username"
                 onChange={this.onChange}
                 value={username}
               />
@@ -61,6 +62,7 @@ export class Register extends Component {
                 type="email"
                 className="form-control"
                 name="email"
+                test-id="email"
                 onChange={this.onChange}
                 value={email}
               />
@@ -71,6 +73,7 @@ export class Register extends Component {
                 type="password"
                 className="form-control"
                 name="password"
+                test-id="password"
                 onChange={this.onChange}
                 value={password}
               />
@@ -81,12 +84,13 @@ export class Register extends Component {
                 type="password"
                 className="form-control"
                 name="password2"
+                test-id="password2"
                 onChange={this.onChange}
                 value={password2}
               />
             </div>
             <div className="form-group">
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary" test-id="submit">
                 Register
               </button>
             </div>
