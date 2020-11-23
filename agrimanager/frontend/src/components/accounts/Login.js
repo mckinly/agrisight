@@ -38,6 +38,7 @@ export class Login extends Component {
                 type="text"
                 className="form-control"
                 name="username"
+                test-id="username"
                 onChange={this.onChange}
                 value={username}
               />
@@ -49,13 +50,14 @@ export class Login extends Component {
                 type="password"
                 className="form-control"
                 name="password"
+                test-id="password"
                 onChange={this.onChange}
                 value={password}
               />
             </div>
 
             <div className="form-group">
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary" test-id="submit">
                 Login
               </button>
             </div>
