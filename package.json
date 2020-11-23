@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --env.ENVIRONMENT=local --mode development --watch ./agrimanager/frontend/src/index.js --output ./agrimanager/frontend/static/frontend/main.js",
     "build": "webpack --env.ENVIRONMENT=production --mode production ./agrimanager/frontend/src/index.js --output ./agrimanager/frontend/static/frontend/main.js",
-    "test": "jest"
+    "test": "jest && npx wdio wdio.conf.js"
   },
   "jest": {
     "verbose": true
@@ -26,8 +26,15 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
+    "@wdio/cli": "^6.9.0",
+    "@wdio/local-runner": "^6.9.0",
+    "@wdio/mocha-framework": "^6.8.0",
+    "@wdio/spec-reporter": "^6.8.1",
+    "@wdio/sync": "^6.9.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "chromedriver": "^87.0.0",
+    "wdio-chromedriver-service": "^6.0.4",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
