@@ -15,8 +15,11 @@ A tested django, react/redux web app with multi-user authentication for creating
 </table>
 
 ## Development
-#### Run
+#### Start web server and backend containers
 1. Clone this repository
 1. Create a `.env` file in the root of the project directory containing `REACT_APP_GOOGLE_API_KEY=<your API key>`
 1. Run `docker-compose up` from the root directory
 1. Frontend is accessible on `localhost:8000`
+
+#### Run Jest and E2E Tests
+1. Run `npm test` from root project directory
