@@ -51,6 +51,7 @@ export class Form extends Component {
               className="form-control"
               type="email"
               name="email"
+              test-id="add-acreage-email"
               onChange={this.onChange}
               value={email}
             />
@@ -61,12 +62,13 @@ export class Form extends Component {
               className="form-control"
               type="text"
               name="address"
+              test-id="add-acreage-address"
               onChange={this.onChange}
               value={address}
             />
           </div>
           <div className="form-group">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" test-id="add-acreage-submit">
               Submit
             </button>
           </div>
