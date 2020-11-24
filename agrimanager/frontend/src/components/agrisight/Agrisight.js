@@ -36,7 +36,7 @@ export class Agrisight extends Component {
               {this.props.acreage.map(acreage => (
                 <tr key={acreage.id}>
                   <td>{acreage.id}</td>
-                  <td>{acreage.name}</td>
+                  <td test-id={acreage.name}>{acreage.name}</td>
                   <td>{acreage.address}</td>
                   <td>{acreage.email}</td>
                   <td>
@@ -49,6 +49,7 @@ export class Agrisight extends Component {
                     <button
                       onClick={this.props.deleteAcreage.bind(this, acreage.id)}
                       className="btn btn-danger btn-sm"
+                      test-id={`delete-acreage-${acreage.name}`}
                     >
                       Delete
                     </button>
