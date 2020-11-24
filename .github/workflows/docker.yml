@@ -33,7 +33,7 @@ jobs:
           run: docker build . -t $IMAGE_NAME 
 
         - name: Test Docker image
-          run: docker-compose up && python -m pytest /code/agrimanager/ && npm test 
+          run: docker run $IMAGE_NAME sh -c "python -m pytest /code/agrimanager/ && npm test" 
 
         - name: Push Docker image
           run: docker push $IMAGE_NAME
