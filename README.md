@@ -22,4 +22,10 @@ A tested django, react/redux web app with multi-user authentication for creating
 1. Frontend is accessible on `localhost:8000`
 
 #### Run Jest and E2E Tests
+1. `docker-compose -f docker-compose.test.yml up`
 1. Run `npm test` from root project directory
+
+#### Run locust.io load test
+1. `cd test/performance`
+1. `docker-compose -f docker-compose.locust.yml up`
+1. Navigate to `0.0.0.0:8089` to access locust fronted for test execution
