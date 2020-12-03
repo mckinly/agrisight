@@ -8,10 +8,12 @@ A tested django, react/redux web app with multi-user authentication for creating
 <table>
 <th>
 <img src=https://static.djangoproject.com/img/logos/django-logo-negative.png width="200" height="100" />
+<img src="https://www.django-rest-framework.org/img/logo.png" height="100" width="200">
 <img src=https://portworx.com/wp-content/uploads/2018/05/postgresql-logo.png width="100" height="100">
 <img src=https://sujanbyanjankar.com.np/wp-content/uploads/2019/02/react-redux.png width="100" height="100">
 <img src=https://docs.pytest.org/en/latest/_static/pytest1.png width="100" height="100">
 <img src="https://www.fleekitsolutions.com/wp-content/uploads/2020/04/webdriverio.png" width="200" height="100">
+<img src="https://miro.medium.com/max/942/1*FuZYvfMNbe1p44XrqNGGdA.png" width="250" height="100">
 </table>
 
 ## Development
