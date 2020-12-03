@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - ../../sql:/docker-entrypoint-initdb.d/
+    environment:
+      - POSTGRES_PASSWORD=password
+  web:
+    build: ../../
+    command: bash -c "ls && python -m pytest /code/agrimanager/ && python agrimanager/manage.py runserver 0.0.0.0:8000 | python agrimanager/manage.py migrate"
+    volumes:
+      - ../../:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  master:
+    image: locustio/locust
+    ports:
+     - "8089:8089"
+    volumes:
+      - ./:/mnt/locust
+    command: -f /mnt/locust/locustfile.py --master -H http://web:8000
+  worker:
+    image: locustio/locust
+    volumes:
+      - ./:/mnt/locust
+    command: -f /mnt/locust/locustfile.py --worker --master-host master
+
+networks:
+  default:
