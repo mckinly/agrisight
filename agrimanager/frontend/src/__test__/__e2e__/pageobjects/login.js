@@ -8,7 +8,7 @@ class LoginPage extends Page {
     get flash() { return $('#__react-alert__') }
 
     open() {
-        super.open('http://localhost:8000/#/login')
+        super.open('localhost:8000/#/login')
     }
 
     submit() {
