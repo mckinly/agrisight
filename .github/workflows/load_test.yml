@@ -1,0 +1,14 @@
+name: load test
+on:
+  push:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the stack
+        run: cd test/performance && docker-compose -f docker-compose.locust.yml up -d --abort-on-container-exit
+      - name: Load test
+        run: npm install
