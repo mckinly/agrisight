@@ -8,6 +8,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=password
   web:
+    container_name: web
     build: .
     command: bash -c "ls && python agrimanager/manage.py runserver 0.0.0.0:8000 | python agrimanager/manage.py migrate"
     volumes:
