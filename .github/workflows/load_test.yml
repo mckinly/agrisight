@@ -1,0 +1,15 @@
+name: load test
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Load test
+        run: cd test/performance && docker-compose -f docker-compose.locust.yml up --abort-on-container-exit
