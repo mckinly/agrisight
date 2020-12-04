@@ -16,6 +16,6 @@ jobs:
       - name: Pytest
         run: docker exec web python -m pytest /code/agrimanager/
       - name: Jest
-        run: docker exec web npm test
-      - name: E2E
-        run: docker exec web npm test-e2e
+        run: docker exec web sh -c "npm test"
+#      - name: E2E
+#        run: docker exec web npm test-e2e
