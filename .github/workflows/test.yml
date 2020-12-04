@@ -1,0 +1,23 @@
+name: run tests
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the stack
+        run: docker-compose -f docker-compose.test.yml up -d
+      - name: NPM
+        run: npm install
+      - name: Pytest
+        run: docker exec web python -m pytest /code/agrimanager/
+      - name: Jest
+        run: npm test -- -u
+#      - name: E2E
+#        run: docker exec web npm test-e2e
