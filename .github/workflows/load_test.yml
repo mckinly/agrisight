@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Load test
-        run: cd test/performance && docker-compose -f docker-compose.locust.yml up -d --abort-on-container-exit
+        run: cd test/performance && docker-compose -f docker-compose.locust.yml up --abort-on-container-exit
