@@ -20,4 +20,4 @@ jobs:
       - name: Jest
         run: npm test -- -u
       - name: E2E
-        run: npm run test-e2e
+        run: xvfb-run npm run test-e2e
