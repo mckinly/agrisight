@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the stack
-        run: docker-compose -f docker-compose.test.yml up -d
+        run: docker-compose -f docker-compose.test.yml up
       - name: Test
-        run: docker run --network container:web python -m pytest /code/agrimanager/
+        run: docker exec web python -m pytest /code/agrimanager/
