@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --env.ENVIRONMENT=local --mode development --watch ./agrimanager/frontend/src/index.js --output ./agrimanager/frontend/static/frontend/main.js",
     "build": "webpack --env.ENVIRONMENT=production --mode production ./agrimanager/frontend/src/index.js --output ./agrimanager/frontend/static/frontend/main.js",
-    "test": "./node_modules/.bin/jest",
+    "test": "jest",
     "test-e2e": "npx wdio wdio.conf.js"
   },
   "jest": {
