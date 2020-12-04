@@ -20,4 +20,4 @@ jobs:
       - name: Jest
         run: npm test -- -u
       - name: E2E
-        run: curl localhost:8000 && curl http://localhost:8000 && curl http://0.0.0.0:8000 && curl http://web:8000 && npm run test-e2e
+        run: curl http://localhost:8000 && npm run test-e2e
