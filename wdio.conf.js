@@ -55,7 +55,7 @@ exports.config = {
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
-            args: ['--headless', '--window-size=1920,1080', '--disable-gpu', '--disable-dev-shm-usage', '--no-sandbox'],
+            args: ['--headless', '--window-size=1920,1080', '--disable-gpu', '--disable-dev-shm-usage', '--no-sandbox', "--proxy-server='direct://", "--proxy-bypass-list=*"],
         },
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
