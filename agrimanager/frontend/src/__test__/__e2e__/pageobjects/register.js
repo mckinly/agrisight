@@ -10,7 +10,7 @@ class RegisterPage extends Page {
     get flash() { return $('#__react-alert__') }
 
     open() {
-        super.open('http://localhost:8000/#/register')
+        super.open('http://0.0.0.0:8000/#/register')
     }
 
     submit() {
