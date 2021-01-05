@@ -7,7 +7,8 @@
     "dev": "webpack --env.ENVIRONMENT=local --mode development --watch ./agrimanager/frontend/src/index.js --output ./agrimanager/frontend/static/frontend/main.js",
     "build": "webpack --env.ENVIRONMENT=production --mode production ./agrimanager/frontend/src/index.js --output ./agrimanager/frontend/static/frontend/main.js",
     "test": "jest",
-    "test-e2e": "npx wdio wdio.conf.js"
+    "test-e2e": "npx wdio wdio.conf.js",
+    "cypress:open": "cypress open"
   },
   "jest": {
     "verbose": true
@@ -34,14 +35,15 @@
     "@wdio/sync": "^6.9.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "chromedriver": "^87.0.0",
+    "chromedriver": "^87.0.5",
+    "cypress": "^6.2.1",
     "wdio-chromedriver-service": "^6.0.4",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "@babel/register": "^7.12.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-jest": "^26.0.1",
     "dotenv": "^8.2.0",
     "google-maps-react": "^2.0.2",
