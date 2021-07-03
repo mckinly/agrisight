@@ -7,13 +7,14 @@ A tested django, react/redux web app with multi-user authentication for creating
 ## Built and Tested using
 <table>
 <th>
-<img src=https://static.djangoproject.com/img/logos/django-logo-negative.png width="200" height="100" />
-<img src="https://www.django-rest-framework.org/img/logo.png" height="100" width="200">
-<img src=https://portworx.com/wp-content/uploads/2018/05/postgresql-logo.png width="100" height="100">
-<img src=https://sujanbyanjankar.com.np/wp-content/uploads/2019/02/react-redux.png width="100" height="100">
-<img src=https://docs.pytest.org/en/latest/_static/pytest1.png width="100" height="100">
-<img src="https://www.fleekitsolutions.com/wp-content/uploads/2020/04/webdriverio.png" width="200" height="100">
-<img src="https://miro.medium.com/max/942/1*FuZYvfMNbe1p44XrqNGGdA.png" width="250" height="100">
+<img src=https://static.djangoproject.com/img/logos/django-logo-negative.png width="200" height="100" alt="django"/>
+<img src="https://www.django-rest-framework.org/img/logo.png" height="100" width="200" alt="django-restframework">
+<img src=https://portworx.com/wp-content/uploads/2018/05/postgresql-logo.png width="100" height="100" alt="postgres">
+<img src=https://sujanbyanjankar.com.np/wp-content/uploads/2019/02/react-redux.png width="100" height="100" alt="react-redux">
+<img src=https://docs.pytest.org/en/latest/_static/pytest_logo_curves.svg width="100" height="100" alt="pytest">
+<img src="https://digital.ai/sites/default/files/pictures/styles/maxwidth_300/public/pt_logos/jest.png?itok=dI0IDX4S" width="250" height="100" alt="jest">
+<img src="https://www.fleekitsolutions.com/wp-content/uploads/2020/04/webdriverio.png" width="200" height="100" alt="webdriverio">
+<img src="https://miro.medium.com/max/942/1*FuZYvfMNbe1p44XrqNGGdA.png" width="250" height="100" alt="locustio">
 </table>
 
 ## Running the App
