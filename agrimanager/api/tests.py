@@ -19,6 +19,6 @@ def test_api_accessible(client):
 
 @pytest.mark.django_db
 def test_list_acreages_unauthorized(client):
-    url = reverse("agrisight-list")
+    url = reverse("acreage-list")
     response = client.get(url)
     assert response.status_code == 401
