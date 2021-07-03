@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from agrisight.models import Acreage
+from api.models import Acreage
 
 
-class AgrisightSerializer(serializers.ModelSerializer):
+class AcreageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Acreage
         fields = "__all__"

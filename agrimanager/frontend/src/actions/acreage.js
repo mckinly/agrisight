@@ -10,7 +10,7 @@ import {
 
 export const getAcreage = () => (dispatch, getState) => {
   axios
-    .get("/api/agrisight/", tokenConfig(getState))
+    .get("/api/acreage/", tokenConfig(getState))
     .then((res) => {
       dispatch({
         type: GET_ACREAGE,
@@ -24,7 +24,7 @@ export const getAcreage = () => (dispatch, getState) => {
 
 export const deleteAcreage = (id) => (dispatch, getState) => {
   axios
-    .delete(`/api/agrisight/${id}/`, tokenConfig(getState))
+    .delete(`/api/acreage/${id}/`, tokenConfig(getState))
     .then((res) => {
       dispatch(createMessage({ deleteAcreage: "Acreage Deleted" }));
       dispatch({
@@ -37,7 +37,7 @@ export const deleteAcreage = (id) => (dispatch, getState) => {
 
 export const addAcreage = (acreage) => (dispatch, getState) => {
   axios
-    .post(`/api/agrisight/`, acreage, tokenConfig(getState))
+    .post(`/api/acreage/`, acreage, tokenConfig(getState))
     .then((res) => {
       dispatch(createMessage({ addAcreage: "Acreage Added" }));
       dispatch({
@@ -53,7 +53,7 @@ export const addAcreage = (acreage) => (dispatch, getState) => {
 export const viewAcreage = (id) => (dispatch, getState) => {
   // TODO: probably want to do some sort of Map component
   axios
-    .get(`/api/agrisight/${id}/`, tokenConfig(getState))
+    .get(`/api/acreage/${id}/`, tokenConfig(getState))
     .then((res) => {
       dispatch({
         type: VIEW_ACREAGE,

@@ -44,7 +44,7 @@ class Migration(migrations.Migration):
                     "location",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        to="agrisight.Location",
+                        to="api.Location",
                     ),
                 ),
             ],

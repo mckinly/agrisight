@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('agrisight', '0003_auto_20200412_0204'),
+        ('api', '0003_auto_20200412_0204'),
     ]
 
     operations = [

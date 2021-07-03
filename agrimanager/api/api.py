@@ -1,11 +1,11 @@
-from agrisight.models import Acreage
+from api.models import Acreage
 from rest_framework import viewsets, permissions
-from .serializers import AgrisightSerializer
+from .serializers import AcreageSerializer
 
 
-class AgrisightViewSet(viewsets.ModelViewSet):
+class AcreageViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
-    serializer_class = AgrisightSerializer
+    serializer_class = AcreageSerializer
 
     def get_queryset(self):
         return self.request.user.acreage.all()

@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     "accounts",
     "knox",
     "frontend",
-    "agrisight.apps.AgrisightConfig",
+    "api.apps.ApiConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
