@@ -1,0 +1,11 @@
+execution:
+- executor: locust
+  concurrency: 10
+  ramp-up: 1m
+  iterations: 1000
+  scenario: load_dashboard
+
+scenarios:
+  load_dashboard:
+    default-address: http://web:8000
+    script: locustfile.py

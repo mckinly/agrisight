@@ -17,18 +17,25 @@ services:
     depends_on:
       - db
 
-  master:
-    image: locustio/locust
-    ports:
-     - "8089:8089"
+#  master:
+#    image: locustio/locust
+#    ports:
+#     - "8089:8089"
+#    volumes:
+#      - ./:/mnt/locust
+#    command: -f /mnt/locust/locustfile.py --master -H http://web:8000 --headless -u 10 -r 1 --run-time 15s
+#  worker:
+#    image: locustio/locust
+#    volumes:
+#      - ./:/mnt/locust
+#    command: -f /mnt/locust/locustfile.py --worker --master-host master
+#
+
+  taurus:
+    image: blazemeter/taurus
     volumes:
-      - ./:/mnt/locust
-    command: -f /mnt/locust/locustfile.py --master -H http://web:8000 --headless -u 10 -r 1 --run-time 15s
-  worker:
-    image: locustio/locust
-    volumes:
-      - ./:/mnt/locust
-    command: -f /mnt/locust/locustfile.py --worker --master-host master
+      - ../../:/mnt/locust
+    command: /mnt/locust/test/performance/taurus.config.yml
 
 networks:
   default:

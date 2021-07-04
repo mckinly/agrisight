@@ -1,4 +1,4 @@
-name: run tests
+name: unit test
 on:
   push:
     branches:
@@ -19,5 +19,3 @@ jobs:
         run: docker exec web python -m pytest /code/agrimanager/
       - name: Jest
         run: npm test -- -u
-#      - name: E2E
-#        run: docker exec web npm test-e2e
