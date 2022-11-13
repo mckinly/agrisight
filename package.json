@@ -37,7 +37,7 @@
     "chromedriver": "^87.0.0",
     "wdio-chromedriver-service": "^6.0.4",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "@babel/register": "^7.12.1",
