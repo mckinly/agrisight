@@ -32,12 +32,12 @@
     "@wdio/mocha-framework": "^6.8.0",
     "@wdio/spec-reporter": "^6.8.1",
     "@wdio/sync": "^6.9.0",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.3.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "chromedriver": "^87.0.0",
     "wdio-chromedriver-service": "^6.0.4",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
     "@babel/register": "^7.12.1",
